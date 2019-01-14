@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="author" content="Alexandru Necula">
 	<meta name="description" content="My personal portfolio. Come and find out if I am what you're looking for!">
-	<meta property="og:image" content="images/portret.png">
+	<meta property="og:image" content="https://cdn.pixabay.com/photo/2017/01/29/13/21/mobile-devices-2017980_960_720.png">
 	<meta property="og:image:width" content="200px">
 	<meta property="og:image:height" content="200px">
 	<meta property="og:description" content="My personal portfolio. Come and find out if I am what you're looking for!">
