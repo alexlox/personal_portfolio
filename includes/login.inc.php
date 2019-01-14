@@ -24,13 +24,13 @@ if(isset($_POST['submit']))
 	{
 		mysqli_stmt_bind_param($stmt, "ss", $username, $username);
 		mysqli_stmt_execute($stmt);
-		$result = mysqli_stmt_get_result($stmt);
-		if($row = mysqli_fetch_assoc($result))
+		mysqli_stmt_bind_result($stmt, $row);
+		if(mysqli_stmt_fetch($stmt))
 		{
-			$pwdCheck = password_verify($password, $row['pass']);
-			if(!pwdCheck)
+			$pwdCheck = password_verify($password, $row);
+			if(!$pwdCheck)
 			{
-				header('Location: ../contact.php?error=pass&uname=' . $username);
+				header('Location: ../contact.php?error=pass');
 				exit();
 			}
 			else

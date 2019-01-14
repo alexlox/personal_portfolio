@@ -25,11 +25,11 @@ if(isset($_POST['submit']))
 	}
 	mysqli_stmt_bind_param($stmt, "s", $_SESSION['username']);
 	mysqli_stmt_execute($stmt);
-	$result = mysqli_stmt_get_result($stmt);
-	if($row = mysqli_fetch_assoc($result))
+	mysqli_stmt_bind_result($stmt, $row1, $row2);
+	if(mysqli_stmt_fetch($stmt))
 	{
-		$header = "From: " . $row['email'];
-		$messagesNr = $row['messagesNr'];
+		$header = "From: " . $row1;
+		$messagesNr = $row2;
 		$messagesNr++;
 		if(!mail($mailTo, $subject, $message, $header))
 		{
