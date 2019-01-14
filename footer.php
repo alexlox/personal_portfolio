@@ -1,5 +1,5 @@
 	<footer>
-		I invite you to see the source code of this website on <a id="footerlink" href="#">Github(not working, should be updated soon)</a>.
+		I invite you to see the source code of this website on <a id="footerlink" target="_blank" href="https://github.com/alexlox/personal_portfolio">Github</a>.
 	</footer>
 <?php
 	if(isset($realFileBasename))
