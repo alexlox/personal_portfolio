@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	background-color: #656565;
+}
+
+a {
+	text-decoration: none;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: stretch;
+	align-content: stretch;
+	width: 100%;
+	z-index: 10;
+}
+
+.nav-item {
+	box-sizing: border-box;
+	padding: 10px 10px;
+	background-color: #FFF;
+	color: #000;
+	border: solid 1px #000;
+	width: 25%;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 300;
+	transition: ease-in-out 0.2s;
+}
+
+.nav-item:hover {
+	background-color: #000;
+	color: #FFF;
+}
+
+hr {
+	height: 5px;
+	background-color: #656565;
+	border: none;
+}
+
+#projects-container {
+	width: 80%;
+	margin: 10% 10%;
+	box-shadow: 0px 0px 5px 5px black;
+}
+
+.project {
+	min-height: 300px;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	transition: ease-in-out 0.3s;
+}
+
+.project:hover {
+	opacity: 0.5;
+}
+
+.project-title, .project-description {
+	display: inline-block;
+	width: auto;
+	padding: 20px 15px;
+	font-size: 60px;
+	color: #FFF;
+	text-shadow: 0px 0px 5px black;
+	background-color: rgb(0,0,0,0.5);
+}
+
+.project-description {
+	font-size: 40px;
+}
+
+footer {
+	background-color: #474747;
+	text-align: center;
+	font-size: 20px;
+	color: #FFF;
+	padding: 10px 0px;
+}
+
+#footerlink {
+	color: #89beee;
+}
+
+@media only screen and (max-width: 480px)
+{
+	nav {
+		position: relative;
+	}
+	.nav-item {
+		width: 100%;
+	}
+	#projects-container {
+		margin: 10% 2.5%;
+		width: 95%;
+	}
+	.project-title {
+		font-size: 40px;
+	}
+	.project-description {
+		font-size: 30px;
+	}
+	footer {
+		font-size: 15px;
+	}
+}

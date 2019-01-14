@@ -1,0 +1,44 @@
+{
+	"Front-End": [
+		{
+			"title": "HTML",
+			"description": "Where we all start."
+		},
+		{
+			"title": "CSS",
+			"description": "Everything has to look nice."
+		},
+		{
+			"title": "JavaScript",
+			"description": "It is looking nice, but what it does?"
+		},
+		{
+			"title": "React",
+			"description": "Don't waste time."
+		},
+		{
+			"title": "jQuery",
+			"description": "Animations, AJAX, REST API made easy."
+		}
+	],
+	"Back-End": [
+		{
+			"title": "PHP",
+			"description": "This is where things get interesting."
+		},
+		{
+			"title": "MySql",
+			"description": "Never trust user input. Be careful with injections."
+		}
+	],
+	"Others": [
+		{
+			"title": "git",
+			"description": "Communication, showing off, saving. Also, this website is on github, see below."
+		},
+		{
+			"title": "C/C++",
+			"description": "Sky is the limit."
+		}
+	]
+}
