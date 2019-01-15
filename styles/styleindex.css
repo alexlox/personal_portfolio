@@ -11,7 +11,7 @@ a {
 }
 
 #banner {
-	background: url("../images/background.jpg") no-repeat center center fixed; 
+	background: url("../images/background-1920.jpg") no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -38,7 +38,7 @@ em {
 	color: #e1e1e1;
 	position: absolute;
 	transform: translateY(-50%);
-	top: 300px;
+	top: 50%;
 	width: 100%;
 	text-align: center;
 }
@@ -166,11 +166,54 @@ footer {
 		font-size: 30px;
 	}
 	.category {
-		min-width: 66%;
+		min-width: 70%;
 		margin-bottom: 10px;
 	}
+	.skill-title {
+		font-size: 25px;
+	}
+	.skill-description {
+		font-size: 20px;
+	}
 	.navigation-item {
-		min-width: 66%;
+		min-width: 70%;
 		margin-bottom: 10px;
+		font-size: 30px;
+	}
+	footer {
+		font-size: 15px;
+	}
+}
+
+@media only screen and (min-width: 1920px)
+{
+	#banner {
+		background: url("../images/background.jpg") no-repeat center center fixed; 
+		min-height: 1000px;
+	}
+	h1, h2 {
+		font-size: 120px;
+	}
+	em {
+		font-size: 70px;
+	}
+	.category {
+		min-width: 300px;
+		padding: 10px 15px;
+		font-size: 40px;
+	}
+	.skill-title {
+		font-size: 40px;
+	}
+	.skill-description {
+		font-size: 30px;
+	}
+	.navigation-item {
+		padding: 10px 15px;
+		min-width: 300px;
+		font-size: 40px;
+	}
+	footer {
+		font-size: 30px;
 	}
 }
