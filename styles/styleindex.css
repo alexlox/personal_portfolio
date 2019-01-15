@@ -159,7 +159,8 @@ footer {
 		position: absolute;
 		bottom: 0;
 		transform: translateX(-50%);
-		margin-left: 50%;
+		left: 50%;
+		min-width: 100%;
 	}
 	em {
 		font-size: 30px;
