@@ -1,7 +1,8 @@
 <?php
 
+/* Unset every session variable and destroy the session */
 session_start();
 session_unset();
 session_destroy();
 
-header('Location: ../contact.php?logout=success');
+header('Location: /contact/logout/success');

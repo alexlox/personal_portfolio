@@ -2,19 +2,23 @@
 
 session_start();
 
+// Prepare variable to choose the correct style file
 $realFileBasename = basename(__FILE__, ".php");
 include_once 'header.php';
 include_once 'navlinks.php';
 
 echo '<div id="contact-container">';
 
+/* If user is logged in show specific things
+   like logout button and contact form */
 if(isset($_SESSION['username']))
 {
 ?>
-	<form action="includes/logout.inc.php" method="POST">
+	<form action="/includes/logout.inc.php" method="POST">
 		<button type="submit" name="submit">Log Out</button>
 	</form>
 <?php
+	/* Write a message if an error is in the URL */
 	if(isset($_GET['error']))
 	{
 		switch ($_GET['error'])
@@ -37,7 +41,7 @@ if(isset($_SESSION['username']))
 ?>
 	<fieldset>
 	<legend>Send something!</legend>
-	<form action="includes/sendmessage.inc.php" method="POST">
+	<form action="/includes/sendmessage.inc.php" method="POST">
 		<input type="text" name="subject" placeholder="Subject" required><br/><br/>
 		<textarea name="message" cols="50" rows="10" placeholder="Write message here..." required>Hi Alex,</textarea><br/><br/>
 		<button type="submit" name="submit">Send</button>
@@ -47,6 +51,7 @@ if(isset($_SESSION['username']))
 }
 else
 {
+	/* Check if logout script completed successfully */
 	if(isset($_GET['logout']))
 	{
 		switch ($_GET['logout'])
@@ -58,6 +63,7 @@ else
 				echo "<div class='error'>Log out didn't work as expected.</div>";
 		}
 	}
+	/* Write a message if an error is in the URL */
 	if(isset($_GET['error']))
 	{
 		switch ($_GET['error'])
@@ -97,11 +103,13 @@ else
 			default:
 		}
 	}
+	/* Only one form will appear.
+	   This is done by toggleforms.js from js directory. */
 ?>
 	<div class = "error">You have to be logged in to send a message.</div>
 	<fieldset id="loginform">
 		<legend>Log In</legend>
-		<form action="includes/login.inc.php" method="POST">
+		<form action="/includes/login.inc.php" method="POST">
 			<input type="text" name="username" placeholder="Username or E-Mail" required><br/><br/>
 			<input type="password" name="password" placeholder="Password" required><br/><br/>
 			<button type="submit" name="submit">Log In</button>
@@ -110,7 +118,7 @@ else
 	</fieldset>
 	<fieldset id="signupform">
 		<legend>Sign Up</legend>
-		<form action="includes/signup.inc.php" method="POST">
+		<form action="/includes/signup.inc.php" method="POST">
 			<input type="text" name="username" placeholder="Username" required><br/><br/>
 			<input type="email" name="email" placeholder="E-Mail" required><br/><br/>
 			<input type="password" name="password" placeholder="Password" required><br/><br/>

@@ -1,6 +1,6 @@
-/*Make an AJAX call to get the local JSON that contains my skills.
-Create divs for every category, skill and description.
-Append them to index.*/
+/* Make an AJAX call to get the local JSON that contains my skills.
+   Create divs for every category, skill and description.
+   Append them to index. */
 $(document).ready(function() {
 	let contentToAppend;
 	$.getJSON("includes/knowledge.inc.json", function(json) {
@@ -16,6 +16,7 @@ $(document).ready(function() {
 			});
 			contentToAppend += "</div></div>";
 			$("#my-knowledge-categories").append(contentToAppend);
+			/* When clicked, the corresponding category will dissapear and skills will show up */
 			$("#" + category.toLowerCase()).click(function() {
 				let slideId = "#slidedown" + category.toLowerCase();
 				let toggleId = "#toggle" + category.toLowerCase();
